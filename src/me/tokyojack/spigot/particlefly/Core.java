@@ -15,19 +15,17 @@ import me.tokyojack.spigot.particlefly.listeners.InventoryClick;
 import me.tokyojack.spigot.particlefly.particles.Particles;
 import me.tokyojack.spigot.particlefly.utils.kommand.KommandManager;
 
+@Getter
 public class Core extends JavaPlugin {
 
+	@Getter
 	private static Core plugin;
 
-	public static Core getPlugin() {
-		return plugin;
-	}
-
-	@Getter
 	private Map<UUID, Particles> flyingParticles = new HashMap<UUID, Particles>();
 
 	public void onEnable() {
 		plugin = this;
+		
 		new KommandManager().addCommand(new FlyingParticles()).build();
 
 		PluginManager pm = getServer().getPluginManager();

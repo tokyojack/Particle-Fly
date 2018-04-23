@@ -16,11 +16,7 @@ import me.tokyojack.spigot.particlefly.Core;
 import me.tokyojack.spigot.particlefly.particles.Particles;
 
 public class InventoryClick implements Listener {
-
-	public InventoryClick(Core core) {
-		// TODO Auto-generated constructor stub
-	}
-
+	
 	@EventHandler(ignoreCancelled = true)
 	public void onInventoryClick(InventoryClickEvent event) {
 		ItemStack clickedItem = event.getCurrentItem();
